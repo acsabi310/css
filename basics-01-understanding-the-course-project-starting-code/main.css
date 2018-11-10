@@ -27,6 +27,7 @@ body {
 .section-title {
 	color: #2ddf5c;
 	/* font-family: inherit; */
+	text-align: center;
 }
 
 #product-overview h1 {
@@ -34,8 +35,17 @@ body {
 	font-family: 'Anton', sans-serif;
 }
 
-/* h1 {
-	
+.plan {
+	background: #d5ffdc;
+	text-align: center; /*az összes inline elemet beigazítja középre*/
+	padding: 16px;
+	margin: 8px;
+	display: inline-block;
+	width: 30%;
+	vertical-align: middle;
+}
+
+/* h1 {	
 	font-family: sans-serif; -> beépített: serif, sans-serif, stb...
 } */
 
