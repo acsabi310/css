@@ -10,7 +10,8 @@ body {
 .main-header {
 	padding: 8px 16px;
 	background: #2ddf5c;
-	width: 100% /* nem kell, block level, alapból ilyen */
+	width: 100%; /* nem kell, block level, alapból ilyen */
+	position: fixed;
 }
 
 .main-header > div {
