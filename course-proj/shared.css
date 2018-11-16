@@ -27,6 +27,12 @@ body {
 	text-decoration: none;
 	font-weight: bold; /*használhatjuk, mert behúztuk a bold verzióját a font-nak*/
 	font-size: 22px;
+	height: 22px;
+	display: inline-block;
+}
+
+.main-header__brand img {
+	height: 100%;	/*csak akkor működik a %, ha a befoglaló elem block v inline-block */
 }
 
 .main-nav {
