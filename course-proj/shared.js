@@ -16,20 +16,24 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
 		backdrop.classList.add('open');
 	})
 }
+if (modalClose) {
+	modalClose.addEventListener('click', function () {
+		// backdrop.style.display = 'none';
+		// modal.style.display = 'none';
+		// modal.className = 'open';	// this just override
+		modal.classList.remove('open');
+		backdrop.classList.remove('open');
+	})
+}
 
-modalClose.addEventListener('click', function () {
-	// backdrop.style.display = 'none';
-	// modal.style.display = 'none';
-	// modal.className = 'open';	// this just override
-	modal.classList.remove('open');
-	backdrop.classList.remove('open');
-})
 
 backdrop.addEventListener('click', function () {
 	// backdrop.style.display = 'none';
 	// modal.style.display = 'none';
 	// mobileNav.style.display = 'none';
-	modalClose.classList.remove('open');
+	if (modalClose) {
+		modalClose.classList.remove('open');
+	}
 	backdrop.classList.remove('open');
 	mobileNav.classList.remove('open');
 });
