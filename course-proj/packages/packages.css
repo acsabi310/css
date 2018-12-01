@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'UbuntuMono';
-	src: url('ubuntuMono-Regular.ttf') format("truetype");
+	src: 	/*url('ubuntuMono-Regular.woff2') format("woff2"),
+			url('ubuntuMono-Regular.woff') format("woff"), */
+			url('ubuntuMono-Regular.ttf') format("truetype");
 }
 
 @font-face {
@@ -69,6 +71,12 @@ main {
 	font-style: italic; */
 	font-family: "UbuntuMono", sans-serif;
 	font-weight: 700;
+	/* line-height: 2; */
+	/* text-decoration: underline wavy red; */
+	/* text-shadow: 2px 2px 7px gray; */
+	/*----------------------------------------*/
+	/* font: italic small-caps 700 1.2rem/2 "UbuntuMono", sans-serif; */
+	/* font-style font-variant font-weight font-size/line-height font-family */
 }
 
 .clearfix {

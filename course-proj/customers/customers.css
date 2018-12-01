@@ -58,6 +58,10 @@ main {
 
 .testimonial__text {
   margin: 0.2rem;
+  /* font-variant: small-caps; */
+  /* font-stretch: ultra-condensed; font face függő, egyesével be kell húzni */
+  /* letter-spacing: 5px; */
+  /* white-space: pre-line; */
 }
 
 @media (min-width: 40rem) {
