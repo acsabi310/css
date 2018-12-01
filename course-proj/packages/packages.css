@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'UbuntuMono';
+	src: url('ubuntuMono-Regular.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: 'UbuntuMono';
+	src: url('ubuntuMono-Bold.ttf');
+	font-weight: 700;
+}
+
 main {
 	padding-top: 2rem;
 }
@@ -53,6 +64,11 @@ main {
 	color: #0e3f1f;
 	font-size: 1.2rem;
 	background: white;
+	/* font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-style: italic; */
+	font-family: "UbuntuMono", sans-serif;
+	font-weight: 700;
 }
 
 .clearfix {
