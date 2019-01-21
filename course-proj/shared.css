@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 * {
   box-sizing: border-box; /* így hagyjuk, minden elem magasságát és szélességét a paddinggal és a borderrel együtt akarjuk meghatározni*/
 }
 
 body {
-  font-family: "Montserrat", sans-serif;	/*font sorrend, ahogyan a böngésző keresni fogja*/
+  font-family: "Montserrat", sans-serif; /*font sorrend, ahogyan a böngésző keresni fogja*/
   margin: 0;
 }
 
@@ -36,63 +36,69 @@ main {
   top: 0;
   left: 0;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.main-header > div {
+/* .main-header > div {
   display: inline-block;
+  vertical-align: middle;
+} */
+
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
   vertical-align: middle;
 }
 
-.toggle-button {
-	width: 3rem;
-	background: transparent;
-	border: none;
-	cursor: pointer;
-	padding-top: 0;
-	padding-bottom: 0;
-	vertical-align: middle;
-}
-
 .toggle-button:focus {
-	outline: none;
+  outline: none;
 }
 
 .toggle-button__bar {
-	width: 100%;
-	height: 0.2rem;
-	background: black;
-	display: block;
-	margin: 0.6rem 0;
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
 }
 
 .main-header__brand {
   color: #0e3f1f;
   text-decoration: none;
   font-weight: bold; /*használhatjuk, mert behúztuk a bold verzióját a font-nak*/
-  height: 2.5rem;
+  /* height: 2.5rem;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: middle; */
 }
 
 .main-header__brand img {
-  height: 100%; /*csak akkor működik a %, ha a befoglaló elem block v inline-block */
+  /* height: 100%;*/ /*csak akkor működik a %, ha a befoglaló elem block v inline-block */
+  height: 2.5rem;
+  vertical-align: middle;
 }
 
 .main-nav {
   display: none;
-  text-align: right;
+  /* text-align: right;
   width: calc(100% - 122px);
-  vertical-align: middle;
+  vertical-align: middle; */
 }
 
 .main-nav__items {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .main-nav__item {
-  display: inline-block;
+  /* display: inline-block;*/
   margin: 0.4rem 1rem;
 }
 
@@ -132,21 +138,6 @@ main {
   border: none;
 }
 
-@media (min-width: 40rem) {
-  .main-nav {
-    display: inline-block;
-    height: 2rem;
-  }
-
-  .main-footer__link {
-    display: inline-block;
-  }
-
-  .toggle-button {
-    display: none;
-  }
-}
-
 .main-footer {
   background: black;
   padding: 2rem;
@@ -156,11 +147,14 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-footer__link {
-  margin: 1rem 1rem;
+  margin: 0.5rem 0rem;
 }
 
 .main-footer__link a {
@@ -188,9 +182,13 @@ main {
   width: 90%;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-nav__item {
@@ -223,12 +221,33 @@ main {
 }
 
 .button[disabled] {
-	cursor: not-allowed;
-	border: #a1a1a1;
-	background: #ccc;
-	color: #a1a1a1;
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
 }
 
 .open {
-	display: block !important;
+  display: block !important;
+}
+
+@media (min-width: 40rem) {
+  .main-nav {
+    /* display: inline-block;
+	  height: 2rem; */
+    display: flex;
+  }
+
+  .main-footer__link {
+    margin: 0 1rem;
+  }
+
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .toggle-button {
+    display: none;
+  }
 }
